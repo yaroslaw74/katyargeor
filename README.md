@@ -1,2 +1,2 @@
-# katyargeor
-Katyargeor Framework for buiseness
+# Katyargeor
+Katyargeor Framework for business
