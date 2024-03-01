@@ -56,7 +56,7 @@
         "doctrine/lexer": "^3.0",
         "doctrine/migrations": "^3.7",
         "doctrine/orm": "^3.0",
-        "doctrine/persistence": "^3.2",
+        "doctrine/persistence": "^3.3",
         "doctrine/sql-formatter": "^1.2",
         "egulias/email-validator": "^4.0",
         "monolog/monolog": "^3.5",
