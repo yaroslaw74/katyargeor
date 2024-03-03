@@ -7,7 +7,7 @@
   * @License    GNU General Public License version 3 or later; see LICENSE.md
   ********************************************************************************#}
 <!DOCTYPE html>
-<html lang="{{ user.locale }}" dir="{{ user.direction }}">
+<html>
     <head>
         <meta charset="UTF-8">
         <meta name="robots" content="noindex, nofollow">
@@ -15,11 +15,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" sizes="48X48" href="{{ asset('favicon.ico') }}">
-        <link rel="icon" sizes="32X32" href="{{ asset('libraries/favicon/favicon-32x32.png') }}" type="image/png">
-		<link rel="icon" sizes="256X256" href="{{ asset('libraries/favicon/favicon-256x256.png') }}" type="image/png">
-		<link rel="icon" sizes="512X512" href="{{ asset('libraries/favicon/favicon-512x512.png') }}" type="image/png">
-		<link rel="icon" size="1024X1024" href="{{ asset('libraries/favicon/favicon-1024x1024.png') }}" type="image/png">
-		<link rel="icon" sizes="any" href="{{ asset('libraries/favicon/favicon.svg') }}" type="image/svg+xml">
+        <link rel="icon" sizes="32X32" href="{{ asset('favicon/favicon-32x32.png') }}" type="image/png">
+		<link rel="icon" sizes="256X256" href="{{ asset('favicon/favicon-256x256.png') }}" type="image/png">
+		<link rel="icon" sizes="512X512" href="{{ asset('favicon/favicon-512x512.png') }}" type="image/png">
+		<link rel="icon" size="1024X1024" href="{{ asset('favicon/favicon-1024x1024.png') }}" type="image/png">
+		<link rel="icon" sizes="any" href="{{ asset('favicon/favicon.svg') }}" type="image/svg+xml">
         {% block stylesheets %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </head>
