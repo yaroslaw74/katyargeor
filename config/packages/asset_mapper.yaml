@@ -2,4 +2,9 @@ framework:
     asset_mapper:
         # The paths to make available to the asset mapper.
         paths:
-            - assets/
+            assets/: ""
+            vendor/components/jquery/: "jquery"
+            vendor/components/jqueryui/: "jqueryui"
+            vendor/fortawesome/font-awesome/: "font-awesome"
+            vendor/twbs/bootstrap/: "bootstrap"
+            vendor/twbs/bootstrap-icons/: "bootstrap-icons"

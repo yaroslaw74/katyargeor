@@ -7,7 +7,7 @@
   * @License    GNU General Public License version 3 or later; see LICENSE.md
   ********************************************************************************#}
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="light" lang="{{ app.locale }}">
     <head>
         <meta charset="UTF-8">
         <meta name="robots" content="noindex, nofollow">
@@ -21,8 +21,8 @@
 		<link rel="icon" size="1024X1024" href="{{ asset('favicon/favicon-1024x1024.png') }}" type="image/png">
 		<link rel="icon" sizes="any" href="{{ asset('favicon/favicon.svg') }}" type="image/svg+xml">
         {% block stylesheets %}{% endblock %}
+        {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% block javascripts %}{% endblock %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}

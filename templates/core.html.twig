@@ -1,0 +1,66 @@
+{#********************************************************************************
+  * @Project    Katyargeor Framework for business
+  * @Version    1.0.0
+  *
+  * @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+  * @E-mail     yaroslaw74@gmail.com
+  * @License    GNU General Public License version 3 or later; see LICENSE.md
+  ********************************************************************************#}
+{% extends 'base.html.twig' %}
+
+{% block title %}Katyargeor Framework for Business{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('jqueryui/themes/base/base.css') }}">
+    <link rel="stylesheet" href="{{ asset('jqueryui/themes/start/theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('jqueryui/themes/start/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('fortawesome/css/svg-with-js.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('bootstrap/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('bootstrap-icons/font/bootstrap-icons.min.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('jqueryui/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/version.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/plugin.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/widget.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/unique-id.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/data.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/disable-selection.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/effect.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/escape-selector.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/focusable.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/form.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/form-reset-mixin.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/ie.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/keycode.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/labels.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/position.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/safe-active-element.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/safe-blur.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/scroll-parent.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/tabbable.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/minified/i18n/datepicker-ru.js') }}"></script>
+    <script src="{{ asset('jqueryui/ui/effects/effect-blind.js') }}"></script>
+    <script src="{{ asset('fortawesome/js/fontawesome.min.js') }}"></script>
+    <script src="{{ asset('fortawesome/js/all.min.js') }}"></script>
+    <script src="{{ asset('bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <header class="container-fluid d-flex flex-column">
+        {% block header %}{% endblock %}
+    </header>
+    <main class="container-fluid d-flex flex-column">
+		{% block main %}{% endblock %}
+	</main>
+    <footer class="container-fluid d-flex flex-row justify-content-between">
+		<div class="align-self-center">
+			{{ include('simfony.swg.twig') }}
+		</div>
+		<div class="align-self-center text-warning"><h6>{% block error %}{% endblock %}</h6></div>
+		<div class="text-nowrap align-self-center" lang="en"><h6><strong>&#169; 2025 Kataev Yaroslav</strong></h6></div>
+	</footer>
+    {% block endbody %}{% endblock %}
+{% endblock %}
