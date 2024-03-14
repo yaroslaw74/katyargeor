@@ -8,8 +8,7 @@
   ********************************************************************************#}
 {% extends 'base.html.twig' %}
 
-{% block title %}Katyargeor Framework for Business
-{% endblock %}
+{% block title %}Katyargeor Framework for Business{% endblock %}
 
 {% block stylesheets %}
 	<link rel="stylesheet" href="{{ asset('jquery-ui/themes/base/base.css') }}">
@@ -61,16 +60,8 @@
 		<div class="align-self-center bg-light-subtle rounded-3">
 			{{ include('simfony.swg.twig') }}
 		</div>
-		<div class="align-self-center text-warning-emphasis">
-			<h6>
-				{% block error %}{% endblock %}
-			</h6>
-		</div>
-		<div class="text-nowrap align-self-center" lang="en">
-			<h6>
-				<strong>&#169; 2025 Kataev Yaroslav</strong>
-			</h6>
-		</div>
+		<div class="align-self-center text-danger"><h6>{% block error %}{% endblock %}</h6></div>
+		<div class="text-nowrap align-self-center" lang="en"><h6><strong>&#169; 2025 Kataev Yaroslav</strong></h6></div>
 	</footer>
 	{% block endbody %}{% endblock %}
 {% endblock %}
