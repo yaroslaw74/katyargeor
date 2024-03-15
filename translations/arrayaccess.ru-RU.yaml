@@ -1,4 +1,4 @@
-# domain - interface
+# domain - core
 # locale - ru-RU
 # Version - 1.0.0
 themes:
@@ -27,6 +27,7 @@ themes:
     ui-darkness: "темный"
     ui-lightness: "легкий"
     vader: "вейдер"
+
 effects:
     blind: "жалюзи"
     bounce: "скачок"
@@ -41,6 +42,7 @@ effects:
     size: "размер"
     slide: "слайд"
     transfer: "передача"
+
 languages:
     af-NA: "африкаанс (Намибия)"
     af-ZA: "африкаанс (Южно-Африканская Республика)"
@@ -545,6 +547,7 @@ languages:
     zh-Hant-MO: "китайский (традиционный, Макао [САР])"
     zh-Hant-TW: "китайский (традиционный, Тайвань)"
     zu-ZA: "зулу (Южно-Африканская Республика)"
+
 Currency:
     AUD: "Австралийский доллар"
     EUR: "Евро"
