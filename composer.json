@@ -154,6 +154,7 @@
         "symfony/web-link": "7.0.*",
         "symfony/workflow": "7.0.*",
         "symfony/yaml": "7.0.*",
+        "symfonycasts/sass-bundle": "^0.6.0",
         "symfonycasts/verify-email-bundle": "^1.16",
         "twbs/bootstrap": "^5.3",
         "twbs/bootstrap-icons": "^1.11",
