@@ -7,7 +7,6 @@ html, body {
 }
 body {
     display: flex; 
-    flex-direction: column;
 }
 header, footer {
     flex: 0 0 auto;
@@ -19,7 +18,7 @@ main {
     width: 7.361rem; 
     height: 3.125rem;
 }
-.logo {
+.katyargeor {
 	width: 9.375rem;
 	height: 9.375rem;
 	animation: 6s linear infinite rotate;
