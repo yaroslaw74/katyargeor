@@ -6,7 +6,8 @@ html, body {
     height: 100%;
 }
 body {
-    display: flex; 
+    display: flex;
+	flex-direction: column; 
 }
 header, footer {
     flex: 0 0 auto;
