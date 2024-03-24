@@ -7,7 +7,7 @@
   * @License    GNU General Public License version 3 or later; see LICENSE.md
   ********************************************************************************#}
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="{{ app.locale }}">
+<html lang="{{ app.locale }}" data-bs-theme="auto" dir="ltr">
     <head>
         <meta charset="UTF-8">
         <meta name="robots" content="noindex, nofollow">
@@ -20,11 +20,16 @@
 		<link rel="icon" sizes="512X512" href="{{ asset('favicon/favicon-512x512.png') }}" type="image/png">
 		<link rel="icon" size="1024X1024" href="{{ asset('favicon/favicon-1024x1024.png') }}" type="image/png">
 		<link rel="icon" sizes="any" href="{{ asset('favicon/favicon.svg') }}" type="image/svg+xml">
+        <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/button.css') }}">
         {% block stylesheets %}{% endblock %}
         {{ importmap('app') }}
         {% block javascripts %}{% endblock %}
+        <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('js/color-modes.js') }}"></script>
     </head>
     <body>
+        {% include 'button.svg.twig' %}
         {% block body %}{% endblock %}
     </body>
 </html>

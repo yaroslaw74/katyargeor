@@ -1,0 +1,43 @@
+/*
+Error: Invalid CSS after "    $primary: map": expected "}", was ".get($brand-the..."
+        on line 13 of C:\inetpub\wwwroot\MyProject\assets\styles\themes\bootstrap.scss
+
+8:         "danger": #e74a3b,
+9:         "warning": #f6c23e,
+10:         "info": #36b9cc
+11:     );
+12: 
+13:     $primary: map.get($brand-theme-colors, "primary");
+14:     $secondary: map.get($brand-theme-colors, "secondary");
+15:     $success: map.get($brand-theme-colors, "success");
+16:     $info: map.get($brand-theme-colors, "info");
+17:     $warning: map.get($brand-theme-colors, "warning");
+18:     $danger: map.get($brand-theme-colors, "danger");
+
+Backtrace:
+C:\inetpub\wwwroot\MyProject\assets\styles\themes\bootstrap.scss:13
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:690:in `block'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:257:in `include_directive'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:234:in `special_directive'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:209:in `directive'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:290:in `render'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:396:in `run'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/3.0.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/bin/sass:23:in `load'
+C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    $primary: map\": expected \"}\", was \".get($brand-the...\"\A         on line 13 of C:\inetpub\wwwroot\MyProject\assets\styles\themes\bootstrap.scss\A \A 8:         \"danger\": #e74a3b,\A 9:         \"warning\": #f6c23e,\A 10:         \"info\": #36b9cc\A 11:     );\A 12: \A 13:     $primary: map.get($brand-theme-colors, \"primary\");\A 14:     $secondary: map.get($brand-theme-colors, \"secondary\");\A 15:     $success: map.get($brand-theme-colors, \"success\");\A 16:     $info: map.get($brand-theme-colors, \"info\");\A 17:     $warning: map.get($brand-theme-colors, \"warning\");\A 18:     $danger: map.get($brand-theme-colors, \"danger\");"; }

@@ -3,6 +3,16 @@ framework:
         # The paths to make available to the asset mapper.
         paths:
             assets/: ""
-            vendor/fortawesome/font-awesome/: "font-awesome"
-            vendor/twbs/bootstrap/: "bootstrap"
-            vendor/twbs/bootstrap-icons/: "bootstrap-icons"
+            vendor/twbs/bootstrap/dist/: "bootstrap"
+            vendor/twbs/bootstrap-icons/font/: "bootstrap-icons"
+            vendor/fortawesome/font-awesome/css/: "fortawesome/css"
+            vendor/fortawesome/font-awesome/js/: "fortawesome/js"
+            vendor/fortawesome/font-awesome/webfonts/: "fortawesome/webfonts"
+
+        excluded_patterns:
+            - "*/*.map"
+            - "*/*.ttf"
+            - "*/*.sass"
+            - "*/*.scss"
+            - "*/*.json"
+            - "*/*.less"

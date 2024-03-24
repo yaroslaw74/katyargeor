@@ -10,6 +10,10 @@ doctrine:
         use_savepoints: true
     orm:
         auto_generate_proxy_classes: true
+        controller_resolver:
+            # Set to false to disable using route placeholders as lookup criteria when the primary key
+            # doesn't match the argument name
+            auto_mapping: true
         enable_lazy_ghost_objects: true
         report_fields_where_declared: true
         validate_xml_mapping: true
@@ -22,4 +26,3 @@ doctrine:
                 dir: "%kernel.project_dir%/src/Entity"
                 prefix: 'App\Entity'
                 alias: App
-

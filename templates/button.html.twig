@@ -1,0 +1,49 @@
+{#********************************************************************************
+  * @Project    Katyargeor Framework for business
+  * @Version    1.0.0
+  *
+  * @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+  * @E-mail     yaroslaw74@gmail.com
+  * @License    GNU General Public License version 3 or later; see LICENSE.md
+  ********************************************************************************#}
+<button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+    <svg xmlns="http://www.w3.org/2000/svg" class="bi my-1 theme-icon-active bi-circle-half" width="1em" height="1em">
+        <use href="#circle-half"></use>
+    </svg>
+    <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+</button>
+<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+  	<li>
+   		<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+   			<svg xmlns="http://www.w3.org/2000/svg" class="bi me-2 opacity-50 bi-sun-fill" width="1em" height="1em">
+                <use href="#sun-fill"></use>
+            </svg>
+           	Light
+           	<svg xmlns="http://www.w3.org/2000/svg" class="bi ms-auto d-none bi-check2" width="1em" height="1em">
+                <use href="#check2"></use>
+            </svg>
+       	</button>
+    </li>
+    <li>
+       	<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+           	<svg xmlns="http://www.w3.org/2000/svg" class="bi me-2 opacity-50 bi-moon-stars-fill" width="1em" height="1em">
+                <use href="#moon-stars-fill"></use>
+            </svg>
+           	Dark
+           	<svg xmlns="http://www.w3.org/2000/svg" class="bi ms-auto d-none bi-check2" width="1em" height="1em">
+                <use href="#check2"></use>
+            </svg>
+       	</button>
+    </li>
+    <li>
+       	<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+           	<svg xmlns="http://www.w3.org/2000/svg" class="bi me-2 opacity-50 bi-circle-half" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+           	Auto
+           	<svg xmlns="http://www.w3.org/2000/svg" class="bi ms-auto d-none bi-check2" width="1em" height="1em">
+                <use href="#check2"></use>
+            </svg>
+       	</button>
+    </li>
+</ul>

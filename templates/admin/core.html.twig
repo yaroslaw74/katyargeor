@@ -9,14 +9,14 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-	<link rel="stylesheet" href="{{ asset('fortawesome/css/svg-with-js.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('bootstrap-icons/bootstrap-icons.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('vendor/@fortawesome/fontawesome-free/css/svg-with-js.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('vendor/bootstrap/dist/css/bootstrap-icons.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/main.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/sidebars.css') }}">
 {% endblock %}
 
 {% block javascripts %}
-	<script src="{{ asset('fortawesome/js/all.min.js') }}" data-auto-replace-svg="nest"></script>
+	<script src="{{ asset('vendor/@fortawesome/fontawesome-free/js/all.min.js') }}" data-auto-replace-svg="nest"></script>
 	<script src="{{ asset('js/sidebars.js') }}"></script>
 {% endblock %}
 
@@ -35,105 +35,6 @@
 		<div class="container d-flex flex-row justify-content-end p-0">
 			<div class="m-1 ps-3">
 				<a href="#"><i class="fa-solid fa-calendar-days fa-2xl"></i></a>
-			</div>
-			<div class="m-1 ps-3">
-				<a href="#" class="fa-layers fa-2xl" data-bs-toggle="dropdown">
-					<i class="fa-solid fa-envelope"></i>
-					<span class="fa-layers-counter"><h1>+10</h1></span>
-				</a>
-				<ul class="dropdown-menu dropdown-menu-end">
-					<li class="dropdown-header">
-						You have 4 new notifications
-						<a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-					</li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li class="">
-                        <i class="bi bi-exclamation-circle text-warning"></i>
-                        <div>
-                            <h4>Lorem Ipsum</h4>
-                            <p>Quae dolorem earum veritatis oditseno</p>
-                            <p>30 min. ago</p>
-                        </div>
-                    </li>
-                    <li><hr class="dropdown-divider"></li>
-            		<li class="">
-              			<i class="bi bi-x-circle text-danger"></i>
-              			<div>
-                			<h5>Atque rerum nesciunt</h5>
-                			<p>Quae dolorem earum veritatis oditseno</p>
-                			<p>1 hr. ago</p>
-              			</div>
-            		</li>
-		            <li><hr class="dropdown-divider"></li>
-		            <li class="notification-item">
-              			<i class="bi bi-check-circle text-success"></i>
-              			<div>
-                			<h5>Sit rerum fuga</h5>
-                			<p>Quae dolorem earum veritatis oditseno</p>
-                			<p>2 hrs. ago</p>
-              			</div>
-            		</li>
-		            <li><hr class="dropdown-divider"></li>
-		            <li class="">
-              			<i class="bi bi-info-circle text-primary"></i>
-              			<div>
-                			<h5>Dicta reprehenderit</h5>
-                			<p>Quae dolorem earum veritatis oditseno</p>
-                			<p>4 hrs. ago</p>
-              			</div>
-            		</li>
-		            <li><hr class="dropdown-divider"></li>
-            		<li class="dropdown-footer"><a href="#">Show all notifications</a></li>
-	        	</ul><!-- End Notification Dropdown Items -->
-			</div>
-			<div class="m-1 ps-3">
-				<a href="#" class="fa-layers fa-2xl" data-bs-toggle="dropdown">
-					<i class="fa-solid fa-bell"></i>
-					<span class="fa-layers-counter"><h1>23</h1></span>
-				</a>
-				<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-            		<li class="dropdown-header">
-              			You have 3 new messages
-              			<a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-            		</li>
-            		<li><hr class="dropdown-divider"></li>
-		            <li class="">
-        		    	<a href="#">
-                			<img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
-                			<div>
-                  				<h5>Maria Hudson</h5>
-                  				<p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  				<p>4 hrs. ago</p>
-                			</div>
-              			</a>
-            		</li>
-            		<li><hr class="dropdown-divider"></li>
-		            <li class="">
-              			<a href="#">
-                			<img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-                			<div>
-                  				<h5>Anna Nelson</h5>
-                  				<p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  				<p>6 hrs. ago</p>
-                			</div>
-              			</a>
-            		</li>
-            		<li><hr class="dropdown-divider"></li>
-		            <li class="">
-              			<a href="#">
-                			<img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-                			<div>
-                  				<h5>David Muldon</h5>
-                  				<p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  				<p>8 hrs. ago</p>
-                			</div>
-              			</a>
-            		</li>
-            		<li><hr class="dropdown-divider"></li>
-		            <li class="dropdown-footer">
-              			<a href="#">Show all messages</a>
-            		</li>
-          		</ul><!-- End Messages Dropdown Items -->
 			</div>
 			<div class="m-1 ps-3">
 				<a class="d-flex align-items-center dropdown-toggle pe-0" href="#" data-bs-toggle="dropdown">
@@ -240,7 +141,6 @@
     		</ul>
   		</div>
 		<div class="d-flex col-8 p-1 bg-body-secondary text-body-emphasis">content</div>
-		<div class="d-flex col-2 p-1 bg-info-subtle text-info-emphasis">mesage</div>
 	</main>
 	<footer class="container-fluid d-flex flex-row justify-content-between bg-body-tertiary p-0">
 		<div class="align-self-center bg-light-subtle rounded-3">
