@@ -19,17 +19,4 @@ main {
     width: 7.361rem; 
     height: 3.125rem;
 }
-.katyargeor {
-	width: 9.375rem;
-	height: 9.375rem;
-	animation: 6s linear infinite rotate;
-}
-@keyframes rotate {
-	from {
-		transform: rotateY(0deg);
-	}
 
-	to {
-		transform: rotateY(360deg);
-	}
-}

@@ -1,0 +1,5 @@
+ru-RU:
+    name: "Русский (Россия)"
+    LangCKEditor: ru
+    LangData: ru
+    dir: ltr

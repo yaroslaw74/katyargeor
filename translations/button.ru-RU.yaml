@@ -2,6 +2,7 @@
 # locale - ru-RU
 # Version - 1.0.0
 button:
+    label: "Переключить тему (авто)"
     name: "Переключить тему"
 list:
     auto: "Авто"

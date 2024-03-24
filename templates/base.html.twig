@@ -20,13 +20,40 @@
 		<link rel="icon" sizes="512X512" href="{{ asset('favicon/favicon-512x512.png') }}" type="image/png">
 		<link rel="icon" size="1024X1024" href="{{ asset('favicon/favicon-1024x1024.png') }}" type="image/png">
 		<link rel="icon" sizes="any" href="{{ asset('favicon/favicon.svg') }}" type="image/svg+xml">
+        <link rel="stylesheet" href="{{ asset('jquery-ui/themes/base/base.css') }}">
+        <link rel="stylesheet" href="{{ asset('jquery-ui/dist/themes/start/theme.css') }}">
+        <link rel="stylesheet" href="{{ asset('jquery-ui/dist/themes/start/jquery-ui.min.css') }}">
         <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/button.css') }}">
         {% block stylesheets %}{% endblock %}
         {{ importmap('app') }}
-        {% block javascripts %}{% endblock %}
+        <script src="{{ asset('jquery/dist/jquery.min.js') }}"></script>
+        <script src="{{ asset('jquery-ui/dist/jquery-ui.min.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/version.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/jquery-patch.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/plugin.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/widget.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/unique-id.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/data.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/disable-selection.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/effect.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/focusable.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/form.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/form-reset-mixin.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/ie.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/jquery-var-for-color.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/keycode.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/labels.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/position.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/safe-active-element.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/safe-blur.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/scroll-parent.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/tabbable.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/i18n/datepicker-ru.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/effects/effect-blind.js') }}"></script>
         <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('js/color-modes.js') }}"></script>
+        {% block javascripts %}{% endblock %}
     </head>
     <body>
         {% include 'button.svg.twig' %}

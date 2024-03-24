@@ -12,7 +12,22 @@
 	<link rel="stylesheet" href="{{ asset('css/install.css') }}">
 {% endblock %}
 
-{% block javascripts %}{% endblock %}
+{% block javascripts %}
+	<script src="{{ asset('jquery-ui/ui/widgets/selectable.js') }}"></script>
+	<script src="{{ asset('jquery-ui/ui/widgets/button.js') }}"></script>
+	<script src="{{ asset('jquery-ui/ui/widgets/tabs.js') }}"></script>
+	<script>
+		$(function() {
+			$("#language")
+				.selectmenu({width: 450})
+				.selectmenu("menuWidget")
+				.addClass("overflow");
+			$("#tabs").tabs();
+			$(".widget input[type=submit]").button("enable");
+			$(".widget input[type=reset]").button("enable");
+		});
+	</script>
+{% endblock %}
 
 {% block body %}
 	<header class="container-fluid d-flex flex-column p-0">
@@ -22,13 +37,14 @@
 		<div class="container-fluid d-flex justify-content-center text-primary-emphasis" lang="en"><h1><strong>Katyargeor Framework for business</strong></h1></div>
 	</header>
 	<main class="container-fluid d-flex flex-column">
-		<div class="border rounded-3 shadow bg-secondary-subtle text-primary-emphasis"></div>
+		<div class="border rounded-3 shadow bg-secondary-subtle d-flex flex-row justify-content-center main p-3">
+			{% block main %}{% endblock %}
+		</div>
 	</main>
-	<footer class="container-fluid d-flex flex-row justify-content-between bg-body-tertiary p-0">
+	<footer class="container-fluid d-flex flex-row justify-content-between bg-body-tertiary p-0 mt-3">
 		<div class="align-self-center bg-light-subtle rounded-3">
 			{% include 'simfony.swg.twig' %}
 		</div>
-		<div class="align-self-center text-danger"><h6>danger</h6></div>
 		<div class="text-nowrap align-self-center text-dark-emphasis pe-3" lang="en"><h6><strong>&copy; 2025 Kataev Yaroslav</strong></h6></div>
 	</footer>
 	<div class="dropdown position-fixed top-0 end-0 mb-3 me-3 bd-mode-toggle">

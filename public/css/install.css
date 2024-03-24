@@ -1,3 +1,23 @@
 @charset "utf-8";
 /* CSS Document */
 
+.main {
+    min-height: 100%;
+}
+.overflow {
+	height: 10rem;
+}
+.katyargeor {
+	width: 9.375rem;
+	height: 9.375rem;
+	animation: 6s linear infinite rotate;
+}
+@keyframes rotate {
+	from {
+		transform: rotateY(0deg);
+	}
+
+	to {
+		transform: rotateY(360deg);
+	}
+}
