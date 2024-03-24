@@ -17,7 +17,7 @@
 {% block body %}
 	<header class="container-fluid d-flex flex-column p-0">
 		<div class="py-1 container-fluid d-flex justify-content-center">
-			{% include katyargeor.svg.twig %}
+			{% include 'katyargeor.svg.twig' %}
 		</div>
 		<div class="container-fluid d-flex justify-content-center text-primary-emphasis" lang="en"><h1><strong>Katyargeor Framework for business</strong></h1></div>
 	</header>
@@ -26,12 +26,12 @@
 	</main>
 	<footer class="container-fluid d-flex flex-row justify-content-between bg-body-tertiary p-0">
 		<div class="align-self-center bg-light-subtle rounded-3">
-			{% include simfony.swg.twig %}
+			{% include 'simfony.swg.twig' %}
 		</div>
 		<div class="align-self-center text-danger"><h6>danger</h6></div>
 		<div class="text-nowrap align-self-center text-dark-emphasis pe-3" lang="en"><h6><strong>&#169; 2025 Kataev Yaroslav</strong></h6></div>
 	</footer>
 	<div class="dropdown position-fixed top-0 end-0 mb-3 me-3 bd-mode-toggle">
-		{% include button.html.twig %}
+		{% include 'button.html.twig' %}
 	</div>
 {% endblock %}

@@ -1,0 +1,9 @@
+# domain - button
+# locale - en
+# Version - 1.0.0
+button:
+    name: "Toggle theme"
+list:
+    auto: "Auto"
+    dark: "Dark"
+    light: "Light"

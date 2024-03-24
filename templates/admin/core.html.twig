@@ -9,14 +9,14 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-	<link rel="stylesheet" href="{{ asset('fortawesome/css/svg-with-js.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('bootstrap-icons/bootstrap-icons.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('vendor/@fortawesome/fontawesome-free/css/svg-with-js.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('vendor/bootstrap/dist/css/bootstrap-icons.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/main.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/sidebars.css') }}">
 {% endblock %}
 
 {% block javascripts %}
-	<script src="{{ asset('fortawesome/js/all.min.js') }}" data-auto-replace-svg="nest"></script>
+	<script src="{{ asset('vendor/@fortawesome/fontawesome-free/js/all.min.js') }}" data-auto-replace-svg="nest"></script>
 	<script src="{{ asset('js/sidebars.js') }}"></script>
 {% endblock %}
 

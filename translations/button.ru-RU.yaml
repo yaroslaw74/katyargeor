@@ -1,0 +1,9 @@
+# domain - button
+# locale - ru-RU
+# Version - 1.0.0
+button:
+    name: "Переключить тему"
+list:
+    auto: "Авто"
+    dark: "Темная"
+    light: "Светлая"
