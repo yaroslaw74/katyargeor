@@ -1,0 +1,24 @@
+{#*******************************************************************************
+  * @Project    KYG Framework for business
+  * @Version    1.0.0
+  *
+  * @Copyright  (C) 2025 Kataev Yaroslav Georgievich 
+  * @E-mail     yaroslaw74@gmail.com
+  * @License    GNU General Public License version 3 or later; see LICENSE.md
+  *******************************************************************************#}
+{% extends 'install/core.html.twig' %}
+
+{% block install_main %}
+	<form action="{{ path('app_install') }}" method="post">
+		<select name="LanguageSetup" id="language">
+			{% foreach Languages as key => Value %}
+				{% if key == 'ru-RU' %}
+					<option value="{{ key }}" lang="{{ key }}" dir="{{ Value.dir }}" selected="selected">{{ Value.name }}</option>
+				{% else %}
+					<option value="{{ key }}" lang="{{ key }}" dir="{{ Value.dir }}">{{ Value.name }}</option>
+				{% endif %}
+			{% endforeach %}
+		</select>
+		<input id="button" class="ui-button ui-widget ui-state-default ui-corner-all" type="submit" value="OK">
+	</form>
+{% endblock %}
