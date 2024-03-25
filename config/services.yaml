@@ -4,6 +4,9 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
+    app.config_dir: "%kernel.project_dir%/config"
+    app.config.packages_dir: "%app.config_dir%/packages"
+    app.extensions_dir: "%kernel.project_dir%/extension"
 
 services:
     # default configuration for services in *this* file
@@ -18,16 +21,19 @@ services:
         exclude:
             - "../src/DependencyInjection/"
             - "../src/Entity/"
+            - "../src/EventSubscriber/"
             - "../src/Kernel.php"
     App\Modules\:
         resource: "../extension/Modules/"
         exclude:
             - "../extension/Modules/**/Resource/"
             - "../extension/Modules/**/Entity/"
+            - "../extension/Modules/**/EventSubscriber"
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-
+    App\EventSubscriber\LocaleSubscriber:
+        tags: [kernel.event_subscriber]
     Squirrel\TwigPhpSyntax\PhpSyntaxExtension: ~
     Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler:
         arguments:

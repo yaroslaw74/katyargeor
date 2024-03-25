@@ -8,9 +8,9 @@
   *******************************************************************************#}
 {% extends 'install/core.html.twig' %}
 
-{% block install_main %}
-	<form action="{{ path('app_install') }}" method="post">
-		<select name="LanguageSetup" id="language">
+{% block main %}
+	<form action="{{ path('install_app') }}" method="post">
+		<select name="_locale" id="language">
 			{% foreach Languages as key => Value %}
 				{% if key == 'ru-RU' %}
 					<option value="{{ key }}" lang="{{ key }}" dir="{{ Value.dir }}" selected="selected">{{ Value.name }}</option>
