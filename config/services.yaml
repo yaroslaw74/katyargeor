@@ -6,7 +6,10 @@
 parameters:
     app.config_dir: "%kernel.project_dir%/config"
     app.config.packages_dir: "%app.config_dir%/packages"
-    app.extensions_dir: "%kernel.project_dir%/extension"
+    app.modules_dir: "%kernel.project_dir%/modules"
+    app.public_dir: "%kernel.project_dir%/public"
+    app.extensions_dir: "%app.public_dir%/extension"
+    app.translations_dir: "%app.public_dir%/translations"
 
 services:
     # default configuration for services in *this* file
@@ -24,11 +27,11 @@ services:
             - "../src/EventSubscriber/"
             - "../src/Kernel.php"
     App\Modules\:
-        resource: "../extension/Modules/"
+        resource: "../modules/"
         exclude:
-            - "../extension/Modules/**/Resource/"
-            - "../extension/Modules/**/Entity/"
-            - "../extension/Modules/**/EventSubscriber"
+            - "../modules/**/Resource/"
+            - "../modules/**/Entity/"
+            - "../modules/**/EventSubscriber"
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

@@ -172,7 +172,8 @@
     "autoload": {
         "psr-4": {
             "App\\": "src/",
-            "App\\Modules\\": "extension/Modules/"
+            "App\\Modules\\": "modules/",
+            "App\\Extension\\": "public/extension/"
         }
     },
     "autoload-dev": {
