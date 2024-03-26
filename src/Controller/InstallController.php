@@ -20,6 +20,13 @@ use App\Modules\Administrations\Resource\ArrayAccess;
 class InstallController extends AbstractController
 {
     private ArrayAccess $ArrayAccess;
+    private $Interface = [
+        "Dir" => "ltr",
+        "Theme" => "start",
+        "Effect" => "blind",
+        "Datepicker" => "ru",
+        "Databstheme" => "auto"
+    ];
     public function __construct()
     {
         $this->ArrayAccess = new ArrayAccess;
@@ -27,9 +34,10 @@ class InstallController extends AbstractController
     #[Route('/install/language', name: 'install_language')]
     public function languageInstall(): Response
     {
-        $Languages = Yaml::parseFile($this->getParameter('app.extensions_dir') . DIRECTORY_SEPARATOR . 'languages.yaml');
+        $Languages = Yaml::parseFile($this->getParameter('app.modules_dir') . DIRECTORY_SEPARATOR . 'languages.yaml');
         return $this->render('install/language.html.twig', [
             'Languages' => $Languages,
+            'Interface' => $this->Interface
         ]);
     }
 
@@ -38,13 +46,16 @@ class InstallController extends AbstractController
     {
         $File = $this->getParameter('app.config.packages_dir') . DIRECTORY_SEPARATOR . 'translation.yaml';
         $translation = Yaml::parseFile($File);
-        $translation['framework']['default_locale'] = $request->request->getString('_locale');
-        $yanl = Yaml::dump($translation, 10);
-        chmod($File, 0777);
-        file_put_contents($File, $yanl);
-        chmod($File, 0755);
+        $Language = $request->request->getString('_locale');
+        $translation['framework']['default_locale'] = $Language;
+        $yaml = Yaml::dump($translation, 10);
+        file_put_contents($File, $yaml);
         return $this->render('install/app.html.twig', [
-
+            'Interface' => $this->Interface,
+            'TimeZone' => $this->ArrayAccess->TimeZone,
+            'TimeZoneDefault' => date_default_timezone_get(),
+            'DataFormat' => $this->ArrayAccess->DataFormat,
+            'TimeFormat' => $this->ArrayAccess->TimeFormat
         ]);
     }
 }

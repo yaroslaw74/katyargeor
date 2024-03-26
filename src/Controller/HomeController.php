@@ -22,7 +22,7 @@ class HomeController extends AbstractController
     public function index(): RedirectResponse
     {
         $filesystem = new Filesystem();
-        if (!$filesystem->exists($this->getParameter('kernel.project_dir') . DIRECTORY_SEPARATOR . '.env.local'))
+        if (!$filesystem->exists($this->getParameter('app.config_dir') . DIRECTORY_SEPARATOR . 'env.yaml'))
             return $this->redirectToRoute('install_language');
         else
             return $this->redirectToRoute('app_home');

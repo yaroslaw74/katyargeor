@@ -37,6 +37,8 @@ services:
     # please note that last definitions always *replace* previous ones
     App\EventSubscriber\LocaleSubscriber:
         tags: [kernel.event_subscriber]
+    App\DependencyInjection\YamlEnvVarLoader:
+        tags: [container.env_var_loader]
     Squirrel\TwigPhpSyntax\PhpSyntaxExtension: ~
     Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler:
         arguments:

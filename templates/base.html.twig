@@ -7,7 +7,7 @@
   * @License    GNU General Public License version 3 or later; see LICENSE.md
   ********************************************************************************#}
 <!DOCTYPE html>
-<html lang="{{ app.locale }}" data-bs-theme="auto" dir="ltr">
+<html lang="{{ app.locale }}" data-bs-theme="{{ Interface.Databstheme }}" dir="{{ Interface.Dir }}">
     <head>
         <meta charset="UTF-8">
         <meta name="robots" content="noindex, nofollow">
@@ -21,8 +21,8 @@
 		<link rel="icon" size="1024X1024" href="{{ asset('favicon/favicon-1024x1024.png') }}" type="image/png">
 		<link rel="icon" sizes="any" href="{{ asset('favicon/favicon.svg') }}" type="image/svg+xml">
         <link rel="stylesheet" href="{{ asset('jquery-ui/themes/base/base.css') }}">
-        <link rel="stylesheet" href="{{ asset('jquery-ui/dist/themes/start/theme.css') }}">
-        <link rel="stylesheet" href="{{ asset('jquery-ui/dist/themes/start/jquery-ui.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('jquery-ui/dist/themes/' ~ Interface.Theme ~ '/theme.css') }}">
+        <link rel="stylesheet" href="{{ asset('jquery-ui/dist/themes/' ~ Interface.Theme ~ '/jquery-ui.min.css') }}">
         <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('css/button.css') }}">
         {% block stylesheets %}{% endblock %}
@@ -49,8 +49,8 @@
         <script src="{{ asset('jquery-ui/ui/safe-blur.js') }}"></script>
         <script src="{{ asset('jquery-ui/ui/scroll-parent.js') }}"></script>
         <script src="{{ asset('jquery-ui/ui/tabbable.js') }}"></script>
-        <script src="{{ asset('jquery-ui/ui/i18n/datepicker-ru.js') }}"></script>
-        <script src="{{ asset('jquery-ui/ui/effects/effect-blind.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/i18n/datepicker-' ~ Interface.Datepicker ~ '.js') }}"></script>
+        <script src="{{ asset('jquery-ui/ui/effects/effect-' ~ Interface.Effect ~ '.js') }}"></script>
         <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('js/color-modes.js') }}"></script>
         {% block javascripts %}{% endblock %}
