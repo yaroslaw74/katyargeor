@@ -22,7 +22,7 @@ class HomeController extends AbstractController
     public function index(): RedirectResponse
     {
         $filesystem = new Filesystem();
-        if (!$filesystem->exists($this->getParameter('app.config_dir') . DIRECTORY_SEPARATOR . 'env.yaml'))
+        if (!$filesystem->exists(KYG_PATH_CONFIG . 'env.yaml'))
             return $this->redirectToRoute('install_language');
         else
             return $this->redirectToRoute('app_home');
