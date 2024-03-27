@@ -15,21 +15,19 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Yaml\Yaml;
-use App\Modules\Administrations\Resource\ArrayAccess;
+use App\Modules\Administrations\Service\ArrayAccess;
 
 class InstallController extends AbstractController
 {
-    private ArrayAccess $ArrayAccess;
     private $Interface = [
         "Dir" => "ltr",
-        "Theme" => "start",
+        "Theme" => "base",
         "Effect" => "blind",
         "Datepicker" => "ru",
         "Databstheme" => "auto"
     ];
-    public function __construct()
+    public function __construct(private ArrayAccess $ArrayAccess)
     {
-        $this->ArrayAccess = new ArrayAccess;
     }
     #[Route('/install/language', name: 'install_language')]
     public function languageInstall(): Response
@@ -57,5 +55,10 @@ class InstallController extends AbstractController
             'DataFormat' => $this->ArrayAccess->DataFormat,
             'TimeFormat' => $this->ArrayAccess->TimeFormat
         ]);
+    }
+    #[Route('/install/login', name: 'install_login')]
+    public function loginInstall(Request $request): RedirectResponse
+    {
+        return $this->redirectToRoute('home');
     }
 }

@@ -29,7 +29,7 @@ services:
     App\Modules\:
         resource: "../modules/"
         exclude:
-            - "../modules/**/Resource/"
+            - "../modules/**/Service/"
             - "../modules/**/Entity/"
             - "../modules/**/EventSubscriber"
 

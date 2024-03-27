@@ -7,7 +7,7 @@
  * @E-mail     yaroslaw74@gmail.com
  * @License    GNU General Public License version 3 or later; see LICENSE.md
  ********************************************************************************/
-namespace App\Modules\Administrations\Resource;
+namespace App\Modules\Administrations\Service;
 
 use Symfony\Component\Translation\Translator;
 

@@ -22,7 +22,9 @@
 				.selectmenu({width: 450})
 				.selectmenu("menuWidget")
 				.addClass("overflow");
-			$("#tabs").tabs();
+			$("#tabs").tabs({
+				heightStyle: "auto"
+			});
 			$(".widget input[type=submit]").button("enable");
 			$(".widget input[type=reset]").button("enable");
 		});

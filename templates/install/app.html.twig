@@ -7,7 +7,119 @@
   * @License    GNU General Public License version 3 or later; see LICENSE.md
   *******************************************************************************#}
 {% extends 'install/core.html.twig' %}
+{% trans_default_domain 'install' %}
 
 {% block main %}
-	
+	<div class="widget ui-corner-all">
+		<form action="{{ path('install_login') }}" method="post">
+			<div id="tabs">
+  				<ul>
+    				<li><a href="#tabs-1">{% trans %}install.conf.bd.tabs{% endtrans %}</a></li>
+    				<li><a href="#tabs-2">{% trans %}install.conf.system.tabs{% endtrans %}</a></li>
+    				<li><a href="#tabs-3">{% trans %}install.conf.interface.tabs{% endtrans %}</a></li>
+  				</ul>
+  				<div id="tabs-1" class="d-flex justify-content-center">
+    				<h3>{% trans %}install.conf.bd.tabs{% endtrans %}</h3>
+					<tble>
+						<tr>
+							<td><label for="HostDB">{% trans %}install.conf.bd.host{% endtrans %}</label></td>
+							<td><input type="text" name="HostDB" required size="15" value="localhost" class="space"></td>
+						</tr>
+						<tr>
+							<td><label for="PortDB"  class="space">{% trans %}install.conf.bd.port{% endtrans %}</label></td>
+							<td><input type="text" name="PortDB" required size="15" class="space" value="3306"></td>
+						</tr>
+						<tr>
+							<td><label for="NameDB" class="space">{% trans %}install.conf.bd.name{% endtrans %}</label></td>
+							<td><input type="text" name="NameDB" required size="15" class="space"></td>
+						</tr>
+						<tr>
+							<td><label for="UserDB" class="space">{% trans %}install.conf.bd.user{% endtrans %}</label></td>
+							<td><input type="text" name="UserDB" required size="15" class="space"></td>
+						</tr>
+						<tr>
+							<td><label for="PasswordDB" class="space">{% trans %}install.conf.bd.password{% endtrans %}</label></td>
+							<td><input type="text" name="PasswordDB" required size="15" class="space"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td align="center"><input type="reset" value="{% trans %}install.button.reset{% endtrans %}" class="button ui-button ui-widget ui-corner-all"></td>
+						</tr>
+					</table>
+  				</div>
+				<div id="tabs-2" class="d-flex justify-content-center">
+    				<h3>{% trans %}install.conf.system.tabs{% endtrans %}</h3>
+					<table>
+						<tr>
+							<td><label for="TimeZoneSistem">{% trans %}install.conf.system.timezone{% endtrans %}</label></td>
+							<td>
+								<select  class="space" size="1" required name="TimeZoneSistem" id="TimeZoneSistem" style="width: 300px">
+									{% foreach TimeZone as Value %}
+										{% if Value == TimeZoneDefault %}
+											<option value="{{ Value }}" lang="en" selected="selected">{{ Value }}</option>
+										{% else %}
+											<option value="{{ Value }}" lang="en">{{ Value }}</option>
+										{% endif %}
+									{% endforeach %}			
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="DataSistem">{% trans %}install.conf.system.data{% endtrans %}</label></td>
+							<td>
+								<select  class="space" size="1" required name="DataSistem" id="DataSistem" style="width: 300px">
+									{% foreach DataFormat as key => Value %}
+										<option value="{{ key }}" lang="en">{{ key }} - {{ Value.example }}</option>
+									{% endforeach %}
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="TimeSistem">{% trans %}install.conf.system.time{% endtrans %}</label></td>
+							<td>
+								<select  class="space" size="1" required name="TimeSistem" id="TimeSistem" style="width: 300px">
+									{% foreach TimeFormat as key => Value %}
+										<option value="{{ key }}" lang="en">{{ key }} - {{ Value.example }}</option>
+									{% endforeach %}
+								</select>
+							</td>
+						</tr>
+					</table>
+  				</div>
+				<div id="tabs-3" class="d-flex justify-content-center">
+					<h3>{% trans %}install.conf.interface.tabs{% endtrans %}</h3>
+					<table>
+						{#<tr>
+							<td><label for="ThemeSistem">{% trans %}install.conf.interface.theme{% endtrans %}</label></td>
+							<td>
+								<select  class="space" size="1" required name="ThemeSistem" id="ThemeSistem"  style="width: 300px">
+									{% foreach Themes as key => Value %}
+										{% if Value == 'start' %}
+											<option value="{{ key }}" selected="selected" lang="{{ Locale }}">{{ Value.text }}</option>
+										{% else %}
+											<option value="{{ key }}" lang="{{ Locale }}">{{ Value.text }}</option>
+										{% endif %}
+									{% endforeach %}			
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td><label for="EffectSistem" lang="{{ Locale }}">{% trans into (Locale) %}kyg.conf.interface.effect{% endtrans %}</label></td>
+							<td>
+								<select  class="space" size="1" required name="EffectSistem" id="EffectSistem" style="width: 300px">
+									{% foreach Effects as key => Value %}
+										<option value="{{ key }}" lang="{{ Locale }}">{{ Value.text }}</option>
+									{% endforeach %}
+								</select>
+							</td>
+						</tr>#}
+						<tr>
+							<td></td>
+							<td><input id="button" class="ui-button ui-widget ui-state-default ui-corner-all" type="submit" value="{% trans %}install.button.submit{% endtrans %}"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</form>
+	</div>
 {% endblock %}

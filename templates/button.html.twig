@@ -6,11 +6,12 @@
   * @E-mail     yaroslaw74@gmail.com
   * @License    GNU General Public License version 3 or later; see LICENSE.md
   ********************************************************************************#}
-<button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+{% trans_default_domain 'button' %}
+<button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="{% trans %}button.label{% endtrans %}">
     <svg xmlns="http://www.w3.org/2000/svg" class="bi my-1 theme-icon-active bi-circle-half" width="1em" height="1em">
         <use href="#circle-half"></use>
     </svg>
-    <span class="visually-hidden text-warning-emphasis" id="bd-theme-text">Toggle theme</span>
+    <span class="visually-hidden text-warning-emphasis" id="bd-theme-text">{% trans %}button.name{% endtrans %}</span>
 </button>
 <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
   	<li>
@@ -18,7 +19,7 @@
    			<svg xmlns="http://www.w3.org/2000/svg" class="bi me-2 opacity-50 bi-sun-fill" width="1em" height="1em">
                 <use href="#sun-fill"></use>
             </svg>
-           	Light
+           	{% trans %}list.light{% endtrans %}
            	<svg xmlns="http://www.w3.org/2000/svg" class="bi ms-auto d-none bi-check2" width="1em" height="1em">
                 <use href="#check2"></use>
             </svg>
@@ -29,7 +30,7 @@
            	<svg xmlns="http://www.w3.org/2000/svg" class="bi me-2 opacity-50 bi-moon-stars-fill" width="1em" height="1em">
                 <use href="#moon-stars-fill"></use>
             </svg>
-           	Dark
+           	{% trans %}list.dark{% endtrans %}
            	<svg xmlns="http://www.w3.org/2000/svg" class="bi ms-auto d-none bi-check2" width="1em" height="1em">
                 <use href="#check2"></use>
             </svg>
@@ -40,7 +41,7 @@
            	<svg xmlns="http://www.w3.org/2000/svg" class="bi me-2 opacity-50 bi-circle-half" width="1em" height="1em">
                 <use href="#circle-half"></use>
             </svg>
-           	Auto
+           	{% trans %}list.auto{% endtrans %}
            	<svg xmlns="http://www.w3.org/2000/svg" class="bi ms-auto d-none bi-check2" width="1em" height="1em">
                 <use href="#check2"></use>
             </svg>
