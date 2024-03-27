@@ -19,7 +19,7 @@ final class YamlEnvVarLoader implements EnvVarLoaderInterface
 
     public function loadEnvVars(): array
     {
-        $fileName = dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . self::ENV_VARS_FILE;
+        $fileName = KYG_PATH_CONFIG . self::ENV_VARS_FILE;
         $filesystem = new Filesystem();
         if (!$filesystem->exists($fileName)) {
             return [];
